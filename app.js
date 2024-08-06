@@ -68,10 +68,10 @@ if (isWordInString(text, word)) {
 // 5. concatenate 2 arrays
 
 const arrOne = [1, 2, 3];
-const arrtwo = [4, 5, 6];
+const arrTwo = [4, 5, 6];
 
 function concatenateArrays(arr1, arr2) {
-  return arrayOne.concat(arrayTwo);
+  return arrOne.concat(arrTwo);
 }
 
 const arrThree = concatenateArrays(arrOne, arrTwo);
