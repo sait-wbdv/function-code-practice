@@ -1,46 +1,79 @@
 "use strict";
 
 // 1. Greeting Message
-const userName = "Finn";
-let greeting = `Hello ${userName}`;
-console.log(greeting);
-
-// Call the function and pass an argument
-
-// 2. even/odd check
-const number = 7;
-if (number % 2 === 0) {
-  console.log(`${number} is even`);
-} else {
-  console.log(`${number} is odd`);
+function greetUser(userName) {
+  return `Hello ${userName}`;
 }
 
-// Call the function and pass an argument
+console.log(greetUser("Finn"));
+
+// 2. even/odd
+
+function isNumberEven(number) {
+  return number % 2 === 0;
+}
+
+function logEvenOddResult(num) {
+  if (isNumberEven(num)) {
+    console.log(`${num} is even`);
+  } else {
+    console.log(`${num} is odd`);
+  }
+}
 
 // 3. Calculator functions
 
 const a = 7;
 const b = 21;
 
-// store each result in a variable and console log that value
+function add(a, b) {
+  return a + b;
+}
+function subtract(a, b) {
+  return b - a;
+}
+function divide(a, b) {
+  return b / a;
+}
+function multiply(a, b) {
+  return a * b;
+}
+const sum = add(a, b);
+const diff = subtract(a, b);
+const quotient = divide(a, b);
+const product = multiply(a, b);
 
-const sum = a + b;
-const diff = a - b;
-const quotient = b / a;
-const product = a * b;
+console.log(
+  `Add: ${sum}`,
+  `Subtract: ${diff}`,
+  `Divide: ${quotient}`,
+  `Multiply: ${product}`
+);
 
 // 4. Check if a string contains a word
 
 const text = "The quick brown fox jumps over the lazy dog";
 const word = "fox";
-if (text.includes(word)) {
-  console.log(`The text contains the word: ${word}`);
+
+function isWordInString(text, word) {
+  return text.includes(word);
 }
 
-// execute the function and log the result, test with different sentences and words
+if (isWordInString(text, word)) {
+  console.log(`Yes, ${word} is in the string: ${text}`);
+} else {
+  console.log(`No, ${word} is not in the string: ${text}`);
+}
 
 // 5. concatenate 2 arrays
 
 const arrOne = [1, 2, 3];
 const arrtwo = [4, 5, 6];
-let combinedArray = arrayOne.concat(arrayTwo);
+
+function concatenateArrays(arr1, arr2) {
+  return arrayOne.concat(arrayTwo);
+}
+
+const arrThree = concatenateArrays(arrOne, arrTwo);
+
+console.log(arrThree);
